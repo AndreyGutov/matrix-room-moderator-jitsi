@@ -1,3 +1,5 @@
+conference_id_module.py - matrix-synapse mode 
+
 /opt/venvs/matrix-synapse/lib/python3.11/site-packages/conference_id_module.py 
 
 modules:
