@@ -66,13 +66,13 @@ export async function createContext(userInfo: Record<string, unknown>, room: str
       if (conferenceId && username) {
         // Query to find room_id and creator by conferenceId
         const query = `
-          SELECT ej.room_id, r.creator
-          FROM event_json ej
-          JOIN rooms r ON ej.room_id = r.room_id
-          WHERE ej.json::text ILIKE $1;
+	         SELECT ej.room_id, r.creator
+	         FROM event_json ej
+	         JOIN rooms r ON ej.room_id = r.room_id
+	         WHERE ej.conference_id = $1;
         `;
         console.log('createContext: Executing query with conferenceId:', conferenceId);
-        const result = await pool.query(query, [`%${conferenceId}%`]);
+        const result = await pool.query(query, [conferenceId]);
 
         console.log('createContext: Query result:', JSON.stringify(result.rows, null, 2));
 
