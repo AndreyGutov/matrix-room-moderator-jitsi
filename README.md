@@ -1,7 +1,7 @@
 Связка matrix-synapse + jitsi + keycloak. 
 Создатель комнаты в matrix-synapse получает права модератора в jitsi, а остальные являются members.
 В keycloak нужно создать mappers, так же нужно добавить группу jitsiAdmin и включить в нее пользователей, данные пользователи будут получать доступ moderator во всех конференциях. 
-
+-
 
 Модифицированы от jitsi-keycloak-adapter. добавлена отладка и передача комнаты.
 adapter.ts
